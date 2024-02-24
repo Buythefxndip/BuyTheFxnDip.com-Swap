@@ -25,13 +25,13 @@
 </head>
 
 <body>
-  <h1>Jupiter Swap</h1>
+  <h1>BTD Swap</h1>
   <div id="jupiter-terminal"></div>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
 
       console.log('LOADED')
-
+      
       //create jupiter-terminal div
       const jupiterTerminal = document.createElement('div')
       jupiterTerminal.id = 'jupiter-terminal'
@@ -41,9 +41,11 @@
       window.Jupiter.init({
         displayMode: "integrated",
         integratedTargetId: "jupiter-terminal",
-        endpoint: "https://mainnet.helius-rpc.com/?api-key=YOUR_API_KEY_HERE",
+        endpoint: "https://mainnet.helius-rpc.com/?api-key=6d10287b-d5f7-482c-b119-2b607936f4f7",
+        strictTokenList: false,
         formProps: {
-          fixedOutputMint: false
+            initialInputMint: "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+            initialOutputMint: "GveFDHQMtzAjtGShFGbXLmHi28cyh7seVudhA6g6XMHQ",
         }
       });
     });
